@@ -1,16 +1,150 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>window.open</title>
-<script type="text/javascript">
-  function Wopen(){
-      window.open('http://huts.win','_blank','width=600,height=400,top=200,left=110,toolbar=yes,scrollbars=no');
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head class="example">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Welcome!</title>
 
-  } 
-</script>
+    <!-- Bootstrap -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+
+
+    <script src="js/vegas/vegas.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <style type="text/css">
+        .welcome{
+            text-align:center;
+            margin-top: 50px;
+            font-size: 80px;
+        }
+        .avatar{
+            position: relative;
+            margin-top: -150px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+            border: 1px solid #fff;
+            box-shadow: 0 5px 1px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .panel-box{
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -300px;
+            width:600px;
+            height:auto;
+
+        }
+        .my-panel-body-head{
+            background-color: #ecf0f1;
+            padding-top: 50px;
+            border-radius: 15px 15px 0 0;
+            width:600px;
+        }
+        .my-panel-body{
+            text-align: center;
+            margin-top: -50px;
+            opacity: 0.8;
+            width:600px;
+            z-index: -1;
+        }
+        .my-panel-body-content{
+            background-color: #ecf0f1;
+            width:600px;
+        }
+        .my-panel-body-foot{
+            background-color: #ecf0f1;
+            border-radius: 0 0 15px 15px;
+            width:600px;
+        }
+        .no-bmar{
+            margin-bottom: 0;
+        }
+        .no-tmar{
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <input name="button" type="button" onClick="Wopen()" value="点击我，打开新窗口!" / >
+    <script>$("body").vegas({slides: [{ src: "img/img1.jpg" }, { src: "img/img2.jpg" }, { src: "img/img3.jpg" }]});</script>
+    <h1 class="welcome animated tada">Welcome!</h1>
+
+    <div class="panel-box" id="scene">
+        <div class="layer scene" data-depth="-0.50">
+            <img src="img/avatar4.jpg" class="avatar">
+        </div>
+        <div class="my-panel-body scene layer" data-depth="0.50">
+            <div class="my-panel-body-head">
+                <h1 class="no-bmar">huts.win</h1>
+            </div>
+            <div class="my-panel-body-content">
+                <h3 class="no-tmar">Blog</h3>
+                <h3>Gallery</h3>
+                <h3 class="no-bmar">Projects</h3>
+            </div>
+            <div class="my-panel-body-foot">
+                about
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Pretty simple huh?
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene,{scalarY:200});
+
+    </script>
+
+
+    <!--
+    <div id="panel-box">
+        <div class="my-panel">
+            <div class="my-panel-body" id="body-op">
+                <div class="my-panel-body" id="panel-top" >
+                </div>
+                <div class="my-panel-body" id="panel-mid">
+                    123
+                </div>
+                <div class="my-panel-body" id="panel-foot">
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="img/avatar4.jpg" class="avatar">
+        </div>
+
+
+    </div>
+-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
