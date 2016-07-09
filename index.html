@@ -7,22 +7,11 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Welcome!</title>
 
-    <!-- Bootstrap -->
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="js/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <script src="https://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="js/vegas/vegas.min.css">
-
 
 
     <script src="js/vegas/vegas.min.js"></script>
@@ -53,7 +42,6 @@
             margin-left: -300px;
             width:600px;
             height:auto;
-
         }
         .my-panel-body-head{
             background-color: #ecf0f1;
@@ -73,7 +61,10 @@
             width:600px;
         }
         .my-panel-body-foot{
+            padding-top: 30px;
+            padding-bottom: 10px;
             background-color: #ecf0f1;
+            border-width: 5px;
             border-radius: 0 0 15px 15px;
             width:600px;
         }
@@ -84,11 +75,25 @@
             margin-top: 0;
             padding-top: 20px;
         }
+        hr{
+            color: #7f8c8d;
+            width: 75%;
+            margin: 0 auto 10px auto;
 
+        }
+        .social-account{
+            padding-left: 5px;
+            width:20px;
+            height: 20px;
+        }
+        .social-icon-list{
+            align-items: center;
+            padding-left: 0;
+        }
     </style>
 </head>
 <body>
-    <script>$("body").vegas({slides: [{ src: "https://ww4.sinaimg.cn/large/0060lm7Tgw1f5mxtepbtyj31400p0wrv.jpg" }, { src: "https://ww2.sinaimg.cn/large/0060lm7Tgw1f5mxtciqkoj31400p010f.jpg" }, { src: "https://ww4.sinaimg.cn/large/0060lm7Tgw1f5mxtbew2aj31hc0u0wpa.jpg" }]});</script>
+    <script>$("body").vegas({slides: [{ src: "img/img1.jpg" }, { src: "img/img2.jpg" }, { src: "img/img3.jpg" }]});</script>
     <h1 class="welcome animated tada">Welcome!</h1>
 
     <div class="panel-box" id="scene">
@@ -102,49 +107,27 @@
             <div class="my-panel-body-content">
                 <h3 class="no-tmar">Blog</h3>
                 <h3>Gallery</h3>
-                <h3 class="no-bmar">Projects</h3>
+                <h4 class="no-bmar">Projects</h4>
+                <h4 class="no-bmar">Links</h4>
             </div>
             <div class="my-panel-body-foot">
-                about
+                <hr>
+                <ul class="social-icon-list">
+                    <img src="img/weibo.png" href="www.weibo.com"  class="social-account">
+                    <img src="img/douban.png" href="www.douban.com"  class="social-account">
+                    <img src="img/twitter.png" href="www.twitter.com"  class="social-account">
+                    <img src="img/github.png" href="www.github.com"  class="social-account">
+                    <img src="img/facebook.png" href="www.facebook.com"  class="social-account">
+                </ul>
+
             </div>
         </div>
 
     </div>
 
     <script>
-
-        // Pretty simple huh?
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene,{scalarY:200});
-
     </script>
-
-
-    <!--
-    <div id="panel-box">
-        <div class="my-panel">
-            <div class="my-panel-body" id="body-op">
-                <div class="my-panel-body" id="panel-top" >
-                </div>
-                <div class="my-panel-body" id="panel-mid">
-                    123
-                </div>
-                <div class="my-panel-body" id="panel-foot">
-
-                </div>
-            </div>
-        </div>
-        <div>
-            <img src="img/avatar4.jpg" class="avatar">
-        </div>
-
-
-    </div>
--->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
