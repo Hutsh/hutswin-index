@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
     <title>Welcome!</title>
 
     <link rel="stylesheet" href="js/bootstrap.min.js">
@@ -22,64 +22,10 @@
             margin-top: 50px;
             font-size: 80px;
         }
-        .avatar{
-            position: relative;
-            margin-top: -150px;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: #ecf0f1;
-            border: 1px solid #fff;
-            box-shadow: 0 5px 1px rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-        .panel-box{
-            text-align: center;
-            position: absolute;
-            top:50%;
-            left: 50%;
-            margin-top: -150px;
-            margin-left: -300px;
-            width:600px;
-            height:auto;
-        }
-        .my-panel-body-head{
-            background-color: #ecf0f1;
-            padding-top: 50px;
-            border-radius: 15px 15px 0 0;
-            width:600px;
-        }
-        .my-panel-body{
-            text-align: center;
-            margin-top: -50px;
-            opacity: 0.8;
-            width:600px;
-            z-index: -1;
-        }
-        .my-panel-body-content{
-            background-color: #ecf0f1;
-            width:600px;
-        }
-        .my-panel-body-foot{
-            padding-top: 30px;
-            padding-bottom: 10px;
-            background-color: #ecf0f1;
-            border-width: 5px;
-            border-radius: 0 0 15px 15px;
-            width:600px;
-        }
-        .no-bmar{
-            margin-bottom: 0;
-        }
-        .no-tmar{
-            margin-top: 0;
-            padding-top: 20px;
-        }
         hr{
             color: #7f8c8d;
             width: 75%;
             margin: 0 auto 10px auto;
-
         }
         .social-account{
             padding-left: 5px;
@@ -90,27 +36,110 @@
             align-items: center;
             padding-left: 0;
         }
+
+        .center-box{
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            min-width: 300px;
+            z-index: 1;
+        }
+        .head-avatar{
+            position: absolute;
+            left: 50%;
+            margin-left: -60px;
+            z-index: 3
+        }
+        .head-avatar>img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+        }
+        .info-box{
+            position:absolute;
+            background-color: #ecf0f1;
+            opacity: 0.8;
+            width: 100%;
+            margin-top: 80px;
+            padding-top: 50px;
+            border-radius: 15px;
+            z-index: 2;
+        }
+        a:link,a:visited {
+            color: #0f0f0f;
+            text-decoration: none;
+            -moz-transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        a:hover {
+            color: #5cb85c;
+            text-decoration: none;
+            letter-spacing: 3px;
+            -moz-transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        ul{
+            list-style:none;
+            text-align: center;
+            padding-left: 0;
+        }
+        .info-links-big{
+            font-size: 30px;
+        }
+        .info-links-small{
+            padding-top: 10px;
+        }
+        .info-links-small>a{
+            font-size: 20px;
+            padding:0 10px;
+        }
+        .info-head{
+            font-weight: 600;
+            font-size: 35px;
+        }
+
     </style>
 </head>
 <body>
-    <script>$("body").vegas({slides: [{ src: "img/img1.jpg" }, { src: "img/img2.jpg" }, { src: "img/img3.jpg" }]});</script>
+    <script>
+        $("body").vegas({transition:'random',slides: [{ src: "img/img1.jpg" }, { src: "img/img2.jpg" }, { src: "img/img3.jpg" }]});
+    </script>
     <h1 class="welcome animated tada">Welcome!</h1>
 
-    <div class="panel-box" id="scene">
-        <div class="layer scene" data-depth="-0.50">
-            <img src="img/avatar4.jpg" class="avatar">
+
+    <div class="center-box" id="scene" data-origin-x="0.0" data-origin-y="0.0" data-scalar-y="20" data-limit-x="50" data-limit-y="50">
+        <div class="head-avatar layer scene" data-depth="-0.50">
+            <img src="img/avatar4.jpg">
         </div>
-        <div class="my-panel-body scene layer" data-depth="0.50">
-            <div class="my-panel-body-head">
-                <h1 class="no-bmar">huts.win</h1>
+        <div class="info-box layer scene" data-depth="0.50">
+            <div class="info-head">
+                <a href="www.huts.win">
+                    HUTS.WIN
+                </a>
+
             </div>
-            <div class="my-panel-body-content">
-                <h3 class="no-tmar">Blog</h3>
-                <h3>Gallery</h3>
-                <h4 class="no-bmar">Projects</h4>
-                <h4 class="no-bmar">Links</h4>
+            <div class="info-body">
+                <ul>
+                    <li class="info-links-big">
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li class="info-links-big">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="info-links-small">
+                        <a href="projects.html">Projects</a>
+                        <a href="links.html">Links</a>
+                    </li>
+
+                </ul>
             </div>
-            <div class="my-panel-body-foot">
+            <div class="info-foot">
                 <hr>
                 <ul class="social-icon-list">
                     <img src="img/weibo.png" href="www.weibo.com"  class="social-account">
@@ -119,15 +148,13 @@
                     <img src="img/github.png" href="www.github.com"  class="social-account">
                     <img src="img/facebook.png" href="www.facebook.com"  class="social-account">
                 </ul>
-
             </div>
         </div>
-
     </div>
 
     <script>
         var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene,{scalarY:200});
+        var parallax = new Parallax(scene);
     </script>
 </body>
 </html>
