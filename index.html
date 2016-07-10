@@ -27,16 +27,6 @@
             width: 75%;
             margin: 0 auto 10px auto;
         }
-        .social-account{
-            padding-left: 5px;
-            width:20px;
-            height: 20px;
-        }
-        .social-icon-list{
-            align-items: center;
-            padding-left: 0;
-        }
-
         .center-box{
             position: relative;
             text-align: center;
@@ -104,6 +94,32 @@
             font-size: 35px;
         }
 
+        @font-face {
+            font-family: 'iconfont';
+            src: url('//at.alicdn.com/t/font_1468131703_650982.eot'); /* IE9*/
+            src: url('//at.alicdn.com/t/font_1468131703_650982.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('//at.alicdn.com/t/font_1468131703_650982.woff') format('woff'), /* chrome、firefox */
+            url('//at.alicdn.com/t/font_1468131703_650982.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('//at.alicdn.com/t/font_1468131703_650982.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont{
+            font-family:"iconfont";
+            font-size:20px;
+            margin-left: 5px;
+        }
+        #icon-email{
+            font-size: 30px;
+        }
+        #icon-email:hover{
+            font-size: 35px;
+        }
+        .social-icon-list{
+            padding-left: 0;
+        }
+        .social-icon-list>a:hover{
+            font-size: 25px;
+        }
+
     </style>
 </head>
 <body>
@@ -142,11 +158,11 @@
             <div class="info-foot">
                 <hr>
                 <ul class="social-icon-list">
-                    <img src="img/weibo.png" href="www.weibo.com"  class="social-account">
-                    <img src="img/douban.png" href="www.douban.com"  class="social-account">
-                    <img src="img/twitter.png" href="www.twitter.com"  class="social-account">
-                    <img src="img/github.png" href="www.github.com"  class="social-account">
-                    <img src="img/facebook.png" href="www.facebook.com"  class="social-account">
+                    <a href="https://twitter.com" class="iconfont">&#xe600;</a>
+                    <a href="https://www.weibo.com" class="iconfont">&#xe602;</a>
+                    <a href="mailto:hutsh@live.com" class="iconfont" id="icon-email">&#xe609;</a>
+                    <a href="https://github.com/hutbun" class="iconfont">&#xe604;</a>
+                    <a href="https://flickr.com" class="iconfont">&#xe608;</a>
                 </ul>
             </div>
         </div>
