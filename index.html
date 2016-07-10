@@ -1,16 +1,176 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>window.open</title>
-<script type="text/javascript">
-  function Wopen(){
-      window.open('http://huts.win','_blank','width=600,height=400,top=200,left=110,toolbar=yes,scrollbars=no');
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head class="example">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  } 
-</script>
+    <title>Welcome!</title>
+
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <script src="https://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+
+    <script src="js/vegas/vegas.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <style type="text/css">
+        .welcome{
+            text-align:center;
+            margin-top: 50px;
+            font-size: 80px;
+        }
+        hr{
+            color: #7f8c8d;
+            width: 75%;
+            margin: 0 auto 10px auto;
+        }
+        .center-box{
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            min-width: 300px;
+            z-index: 1;
+        }
+        .head-avatar{
+            position: absolute;
+            left: 50%;
+            margin-left: -60px;
+            z-index: 3
+        }
+        .head-avatar>img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+        }
+        .info-box{
+            position:absolute;
+            background-color: #ecf0f1;
+            opacity: 0.8;
+            width: 100%;
+            margin-top: 80px;
+            padding-top: 50px;
+            border-radius: 15px;
+            z-index: 2;
+        }
+        a:link,a:visited {
+            color: #0f0f0f;
+            text-decoration: none;
+            -moz-transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        a:hover {
+            color: #5cb85c;
+            text-decoration: none;
+            letter-spacing: 3px;
+            -moz-transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        ul{
+            list-style:none;
+            text-align: center;
+            padding-left: 0;
+        }
+        .info-links-big{
+            font-size: 30px;
+        }
+        .info-links-small{
+            padding-top: 10px;
+        }
+        .info-links-small>a{
+            font-size: 20px;
+            padding:0 10px;
+        }
+        .info-head{
+            font-weight: 600;
+            font-size: 35px;
+        }
+
+        @font-face {
+            font-family: 'iconfont';
+            src: url('//at.alicdn.com/t/font_1468131703_650982.eot'); /* IE9*/
+            src: url('//at.alicdn.com/t/font_1468131703_650982.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('//at.alicdn.com/t/font_1468131703_650982.woff') format('woff'), /* chrome、firefox */
+            url('//at.alicdn.com/t/font_1468131703_650982.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('//at.alicdn.com/t/font_1468131703_650982.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont{
+            font-family:"iconfont";
+            font-size:20px;
+            margin-left: 5px;
+        }
+        #icon-email{
+            font-size: 30px;
+        }
+        #icon-email:hover{
+            font-size: 35px;
+        }
+        .social-icon-list{
+            padding-left: 0;
+        }
+        .social-icon-list>a:hover{
+            font-size: 25px;
+        }
+
+    </style>
 </head>
 <body>
-    <input name="button" type="button" onClick="Wopen()" value="点击我，打开新窗口!" / >
+    <script>
+        $("body").vegas({transition:'random',slides: [{ src: "img/img1.jpg" }, { src: "img/img2.jpg" }, { src: "img/img3.jpg" }]});
+    </script>
+    <h1 class="welcome animated tada">Welcome!</h1>
+
+
+    <div class="center-box" id="scene" data-origin-x="0.0" data-origin-y="0.0" data-scalar-y="20" data-limit-x="50" data-limit-y="50">
+        <div class="head-avatar layer scene" data-depth="-0.50">
+            <img src="img/avatar4.jpg">
+        </div>
+        <div class="info-box layer scene" data-depth="0.50">
+            <div class="info-head">
+                <a href="www.huts.win">
+                    HUTS.WIN
+                </a>
+
+            </div>
+            <div class="info-body">
+                <ul>
+                    <li class="info-links-big">
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li class="info-links-big">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="info-links-small">
+                        <a href="projects.html">Projects</a>
+                        <a href="links.html">Links</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="info-foot">
+                <hr>
+                <ul class="social-icon-list">
+                    <a href="https://twitter.com" class="iconfont">&#xe600;</a>
+                    <a href="https://www.weibo.com" class="iconfont">&#xe602;</a>
+                    <a href="mailto:hutsh@live.com" class="iconfont" id="icon-email">&#xe609;</a>
+                    <a href="https://github.com/hutbun" class="iconfont">&#xe604;</a>
+                    <a href="https://flickr.com" class="iconfont">&#xe608;</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
 </body>
 </html>
