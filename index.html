@@ -54,10 +54,17 @@
             box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);*/
         }
         #avatar-img{
+            transition: 2s cubic-bezier(.36,.98,.35,.96);
+            -moz-transition: 2s cubic-bezier(.36,.98,.35,.96);
             -webkit-transition: 2s cubic-bezier(.36,.98,.35,.96);
+            -o-transition: 2s cubic-bezier(.36,.98,.35,.96);
         }
         #avatar-img:hover{
+            transform: rotate(720deg);
+            -ms-transform: rotate(720deg);      /* IE 9 */
             -webkit-transform: rotate(720deg);  /* Safari and Chrome */
+            -o-transform: rotate(720deg);       /* Opera */
+            -moz-transform: rotate(720deg);     /* Firefox */
         }
         #avatar-img:hover:before{
         }
