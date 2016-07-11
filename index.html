@@ -37,17 +37,32 @@
             z-index: 1;
         }
         .head-avatar{
-            position: absolute;
-            left: 50%;
-            margin-left: -60px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+            /*position: absolute;*/
+            margin: 0 auto;
             z-index: 3
         }
         .head-avatar>img{
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 1px solid #fff;
-            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+            /*border: 1px solid #fff;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);*/
+        }
+        #avatar-img{
+            -webkit-transition: 2s cubic-bezier(.36,.98,.35,.96);
+        }
+        #avatar-img:hover{
+            -webkit-transform: rotate(720deg);  /* Safari and Chrome */
+        }
+        #avatar-img:hover:before{
+        }
+        #avatar-img:hover:after{
+
         }
         .info-box{
             position:absolute;
@@ -125,18 +140,18 @@
 <body>
     <script>
         $("body").vegas({transition:'random',slides: [
-            { src: "https://ww3.sinaimg.cn/large/6a4d4d47jw1f5ozcg6gpyj21400p0wrv.jpg" }, 
-            { src: "https://ww3.sinaimg.cn/large/6a4d4d47jw1f5ozcf8k5kj21400p010f.jpg" }, 
+            { src: "https://ww3.sinaimg.cn/large/6a4d4d47jw1f5ozcg6gpyj21400p0wrv.jpg" },
+            { src: "https://ww3.sinaimg.cn/large/6a4d4d47jw1f5ozcf8k5kj21400p010f.jpg" },
             { src: "https://ww2.sinaimg.cn/large/6a4d4d47jw1f5ozcfy7dej21hc0u0wpa.jpg" }]});
     </script>
     <h1 class="welcome animated tada">Welcome!</h1>
 
 
-    <div class="center-box" id="scene" data-origin-x="0.0" data-origin-y="0.0" data-scalar-y="20" data-limit-x="50" data-limit-y="50">
-        <div class="head-avatar layer scene" data-depth="-0.50">
-            <img src="img/avatar4.jpg">
+    <div class="center-box" id="scene">
+        <div class="head-avatar layer scene" data-depth="-0.5">
+            <img src="https://ww2.sinaimg.cn/large/6a4d4d47jw1f5p37abk38j20m80m876a.jpg" id="avatar-img">
         </div>
-        <div class="info-box layer scene" data-depth="0.50">
+        <div class="info-box layer scene" data-depth="0.5">
             <div class="info-head">
                 <a href="www.huts.win">
                     HUTS.WIN
@@ -165,7 +180,7 @@
                     <a href="https://www.weibo.com" class="iconfont">&#xe602;</a>
                     <a href="mailto:hutsh@live.com" class="iconfont" id="icon-email">&#xe609;</a>
                     <a href="https://github.com/hutbun" class="iconfont">&#xe604;</a>
-                    <a href="https://flickr.com" class="iconfont">&#xe608;</a>
+                    <a href="https://www.flickr.com/photos/99920919@N04/" class="iconfont">&#xe608;</a>
                 </ul>
             </div>
         </div>
